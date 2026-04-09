@@ -1,0 +1,99 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.planes{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    flex-grow: 1;
+}
+
+.planes h1{
+    margin-bottom: 30px;
+}
+
+.contenedor-planes{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+nav {
+    width: 100%;
+    background-color: white;
+}
+nav ul {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 15px;
+}
+footer {
+    background-color: white;
+    width: 100%;
+    margin: 0;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+.plan{
+    background-color: white;
+    border: 1px solid gray;
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.destacado{
+    border: 2px solid #4a74d1;
+}
+
+.plan h2{
+    margin-top: 0;
+}
+
+.descripcion{
+    color: gray;
+    font-size: 14px;
+}
+
+.precio{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.precio span{
+    font-size: 16px;
+}
+
+.plan ul{
+    padding-left: 20px;
+}
+
+.plan li{
+    margin-bottom: 10px;
+}
+
+.boton{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #2f5fd0;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}

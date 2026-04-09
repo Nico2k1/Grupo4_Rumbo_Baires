@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(244, 244, 244);
+    font-family: Arial
+}
+
+nav ul {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 50%;
+}
+
+footer {
+    background-color: white;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 20px 30px;
+}
+
