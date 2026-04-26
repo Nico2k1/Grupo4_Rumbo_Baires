@@ -5,20 +5,6 @@ body {
     font-family: Arial
 }
 
-nav ul {
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-nav a {
-    text-decoration: none;
-    color: inherit;
-}
-
 .Foro {
     background-color: white;
     padding: 20px 30px;
