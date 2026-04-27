@@ -11,19 +11,119 @@ img {
 }
 
 .Foro {
-    background-color: white;
+    background-color: rgb(244, 244, 244);
     padding: 20px 30px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: center;
+    gap: 22px;
+}
+
+.foro-columnas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    padding: 32px 30px 24px;
+    background-color: white;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.foro-columnas::before,
+.foro-columnas::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: -368px;
+    width: 1px;
+    background-color: rgb(205, 205, 205);
+    pointer-events: none;
+}
+
+.foro-columnas::before {
+    left: 33%;
+    transform: translateX(-50%); /* Esto es para centrar la línea vertical entre las columnas. Al usar translateX(-50%), se mueve la línea hacia la izquierda en un 50% de su propio ancho, lo que hace que quede perfectamente centrada entre las columnas. */
+}
+
+.foro-columnas::after {
+    left: 66.6666%;
+    transform: translateX(-50%);/* Esto es para centrar la línea vertical entre las columnas. Al usar translateX(-50%), se mueve la línea hacia la izquierda en un 50% de su propio ancho, lo que hace que quede perfectamente centrada entre las columnas. */
+}
+
+.foro-columna {
+    border-radius: 14px;
+    overflow: visible;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 270px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid rgb(235, 235, 235);
+}
+
+.foro-columna img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    max-height: 165px;
+    aspect-ratio: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.foro-textos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    padding: 0 30px 30px;
+    background-color: white;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.foro-texto-columna {
+    max-width: 270px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+}
+
+.foro-texto-columna h3 {
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+.foro-texto-columna p {
+    margin: 0 0 8px;
+    text-align: left;
+    line-height: 1.45;
+    text-wrap: pretty; /* Esto es para que el texto se ajuste de manera más natural dentro del contenedor, evitando cortes abruptos en palabras largas. */
 }
 
 .foro-imagen {
-    width: 16%;
-    min-width: 120px;
-    max-width: 190px;
+    width: 12%;
+    min-width: 90px;
+    max-width: 130px;
     background-color: transparent;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }       
 
 .foro-imagen img {
@@ -36,8 +136,13 @@ img {
 }
 
 .foro-contenido {
-    width: 76%;
-    text-align: right;
+    width: 68%;
+    text-align: center;
+}
+
+.foro-contenido p {
+    width: 88%;
+    margin: 0 auto 10px;
 }
 
 .boton-foro {
@@ -155,6 +260,27 @@ img {
         gap: 20px;
     }
 
+    .foro-columnas {
+        grid-template-columns: 1fr; /* 1fr  representa una unidad fraccionaria (fractional unit), esto es para que el contenedor tenga una sola columna que ocupa todo el ancho disponible. */
+        padding: 0 16px 20px;
+        max-width: none;
+    }
+
+    .foro-columnas::before,
+    .foro-columnas::after {
+        content: none;
+    }
+
+    .foro-textos {
+        grid-template-columns: 1fr;
+        padding: 0 16px 24px;
+        max-width: none;
+    }
+
+    .foro-texto-columna {
+        max-width: none;
+    }
+
     .foro-imagen,
     .foro-contenido {
         width: 100%;
@@ -163,10 +289,15 @@ img {
     .foro-imagen {
         width: 70%;
         max-width: 220px;
+        justify-content: center;
     }
 
     .foro-contenido {
-        text-align: left;
+        text-align: center;
+    }
+
+    .foro-contenido p {
+        width: 100%;
     }
 }
 
