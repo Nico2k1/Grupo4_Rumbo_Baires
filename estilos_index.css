@@ -5,6 +5,11 @@ body {
     font-family: Arial
 }
 
+img {
+    display: block;
+    border-radius: 14px;
+}
+
 .Foro {
     background-color: white;
     padding: 20px 30px;
@@ -15,8 +20,9 @@ body {
 }
 
 .foro-imagen {
-    width: 20%;
-    min-width: 160px;
+    width: 16%;
+    min-width: 120px;
+    max-width: 190px;
     background-color: transparent;
 }       
 
@@ -58,19 +64,58 @@ body {
 
 .foto-contenedor {
     width: 50%;
+    max-width: 560px;
+    aspect-ratio: 16 / 10;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#foto-flota {
+    margin-top: 16px;
 }
 
 .foto-contenedor img {
     width: 100%;
-    display: block;
+    height: 100%;
+    object-fit: cover;
 }
-.bloque-info p {
+
+.bloque-texto-flota,
+.bloque-texto-recorrido {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.bloque-texto-recorrido {
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.bloque-texto-flota h2,
+.bloque-texto-recorrido h2 {
+    margin: 0 0 12px 0;
+    text-align: center;
+}
+
+.bloque-texto-flota p,
+.bloque-texto-recorrido p {
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.bloque-info > p {
     width: 49%;
     margin: 0;
     text-align: left;
 }
 
-.bloque-info-reversa p {
+.bloque-info-reversa > p {
     text-align: left;
     padding-left: 20px;
     box-sizing: border-box;
@@ -84,9 +129,25 @@ body {
     }
 
     .foto-contenedor,
-    .bloque-info p {
+    .bloque-info > p {
         width: 100%;
         margin: 0 0 20px 0;
+    }
+
+    #foto-flota {
+        margin-top: 0;
+    }
+
+    .bloque-texto-flota,
+    .bloque-texto-recorrido {
+        width: 100%;
+        margin: 0 0 20px 0;
+        padding-left: 0;
+    }
+
+    .bloque-texto-flota p,
+    .bloque-texto-recorrido p {
+        width: 100%;
     }
 
     .Foro {
@@ -97,6 +158,11 @@ body {
     .foro-imagen,
     .foro-contenido {
         width: 100%;
+    }
+
+    .foro-imagen {
+        width: 70%;
+        max-width: 220px;
     }
 
     .foro-contenido {
