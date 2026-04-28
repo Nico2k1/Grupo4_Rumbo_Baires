@@ -129,6 +129,8 @@
     width: 100%;
     height: 116px;
     display: block;
+    border: 0;
+    overflow: hidden;
 }
 
 .footer-tagline {
@@ -180,5 +182,40 @@
         grid-template-columns: 1fr;
         gap: 18px;
         padding-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-footer {
+        padding: 24px 14px;
+        gap: 18px;
+    }
+
+    .footer-brand {
+        min-width: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-logo {
+        width: 150px;
+    }
+
+    .footer-logo object {
+        height: 98px;
+    }
+
+    .footer-tagline {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+
+    .footer-links {
+        gap: 16px;
+    }
+
+    .footer-column h4 {
+        margin-bottom: 10px;
     }
 }

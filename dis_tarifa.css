@@ -20,11 +20,11 @@ body{
 }
 
 .contenedor-planes{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
 }
-footer {
+.site-footer {
     background-color: white;
     width: 100%;
     margin: 0;
@@ -34,7 +34,7 @@ footer {
 .plan{
     background-color: white;
     border: 1px solid gray;
-    width: 30%;
+    width: auto;
     padding: 20px;
     border-radius: 10px;
 }
@@ -78,4 +78,45 @@ footer {
     padding: 10px;
     border-radius: 5px;
     margin-top: 20px;
+}
+
+@media (max-width: 768px){
+    .planes{
+        padding: 0 16px;
+    }
+
+    .planes h1{
+        margin-bottom: 18px;
+        font-size: 2rem;
+    }
+
+    .contenedor-planes{
+        grid-template-columns: 1fr;
+    }
+
+    .plan{
+        padding: 18px;
+    }
+
+    .precio{
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px){
+    .planes{
+        padding: 0 12px;
+    }
+
+    .plan{
+        padding: 16px;
+    }
+
+    .precio{
+        font-size: 24px;
+    }
+
+    .boton{
+        padding: 12px;
+    }
 }

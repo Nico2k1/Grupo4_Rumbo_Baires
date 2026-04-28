@@ -5,7 +5,7 @@
     li{color: rgb(0, 0, 0); font-size: 20px;}
     body{ background-color: rgb(244, 244, 244); margin: 0; padding: 0;}
     header{background-color: white; margin: 40px; border: solid 15px;padding: 10px;}
-    footer {
+    .site-footer {
     background-color: white;
     width: 100%;
     margin: 0;
