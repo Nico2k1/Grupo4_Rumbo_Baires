@@ -264,6 +264,21 @@ img {
         grid-template-columns: 1fr; /* 1fr  representa una unidad fraccionaria (fractional unit), esto es para que el contenedor tenga una sola columna que ocupa todo el ancho disponible. */
         padding: 0 16px 20px;
         max-width: none;
+        justify-items: center;
+        display: none;
+    }
+
+    .foro-columna {
+        width: min(100%, 340px);
+        max-width: 340px;
+        min-height: auto;
+        padding: 18px;
+    }
+
+    .foro-columna img {
+        width: 84%;
+        max-width: 190px;
+        max-height: 190px;
     }
 
     .foro-columnas::before,
@@ -298,6 +313,36 @@ img {
 
     .foro-contenido p {
         width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .foro-columnas {
+        padding: 0 12px 14px;
+        gap: 16px;
+    }
+
+    .foro-columna {
+        width: min(100%, 280px);
+        max-width: 280px;
+        padding: 12px;
+        min-height: 150px;
+    }
+
+    .foro-columna img {
+        width: 74%;
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .foro-textos {
+        padding: 0 12px 20px;
+        gap: 16px;
+    }
+
+    .foro-texto-columna {
+        padding: 12px;
     }
 }
 
